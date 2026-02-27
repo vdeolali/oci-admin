@@ -215,7 +215,7 @@ async def get_bucket_sizes_by_user(args: dict) -> dict:
     result = {
         "namespace": namespace,
         "compartment_id": args["compartment_id"],
-        "total_buckets": len(all_buckets),
+        "total_buckets": len(all_summaries),
         "by_user": summary,
     }
     return {"content": [{"type": "text", "text": json.dumps(result, indent=2)}]}
